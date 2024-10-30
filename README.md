@@ -1,18 +1,60 @@
-## Getting Started
+# Projeto Demonstração Singleton
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto demonstra a implementação de três variações do padrão de projeto Singleton em Java.
 
-## Folder Structure
+## Descrição
 
-The workspace contains two folders by default, where:
+O projeto contém exemplos práticos das seguintes implementações do Singleton:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Singleton Lazy (Preguiçoso)**: Inicialização sob demanda
+- **Singleton Eager (Antecipado)**: Inicialização imediata
+- **Singleton LazyHolder**: Inicialização thread-safe usando holder class
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Estrutura do Projeto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+src/
+└── one/
+└── digitalinovation/
+├── Test.java
+├── SingletonLazy.java
+├── SingletonEager.java
+└── SingletonLazyHolder.java
 
-## Dependency Management
+## Implementações
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### SingletonLazy
+- Inicialização preguiçosa
+- Instância criada apenas quando necessário
+- Requer verificação de thread-safety
+
+### SingletonEager
+- Inicialização antecipada
+- Instância criada na carga da classe
+- Thread-safe por natureza
+
+### SingletonLazyHolder
+- Inicialização thread-safe
+- Usa classe estática interna (holder)
+- Combina benefícios das abordagens lazy e eager
+
+## Como Executar
+
+1. Clone o repositório
+2. Compile os arquivos Java
+3. Execute a classe Test
+ bash
+javac src/one/digitalinovation/.java
+java -cp src one.digitalinovation.Test
+
+
+## Tecnologias Utilizadas
+- Java
+- Padrão de Projeto Singleton
+
+## Autor
+Yuri Augusto Bernardes de Sousa
+
+## Licença
+Este projeto está sob a licença MIT.
+
+
